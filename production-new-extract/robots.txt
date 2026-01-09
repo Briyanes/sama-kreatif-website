@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Disallow template and reference files
+Disallow: /frisk/
+Disallow: /assets/js/vendor/
+Disallow: /about-original.html
+
+# Disallow backup files
+Disallow: /*.bak
+Disallow: /*.tmp
+
+# Sitemap location
+Sitemap: https://samakreatif.com/sitemap.xml
+
+# Crawl-delay (optional, adjust as needed)
+Crawl-delay: 1

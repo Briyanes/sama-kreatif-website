@@ -1,0 +1,22 @@
+DirectoryIndex index.html
+
+Options -indexes
+
+Options +FollowSymLinks
+
+RewriteEngine on
+
+RewriteRule ^index$ index.html
+RewriteRule ^home$ index.html
+RewriteRule ^about$ about.html
+RewriteRule ^contact$ contact.html
+RewriteRule ^digital-ads$ digital-ads.html
+RewriteRule ^faq-igshop$ faq-igshop.html
+RewriteRule ^faq-webdev$ faq-webdev.html
+RewriteRule ^instagram-shopping-activate$ instagram-shopping-activate.html
+RewriteRule ^social-media-management$ social-media-management.html
+RewriteRule ^team$ team.html
+RewriteRule ^visual-design$ visual-design.html
+RewriteRule ^website-development$ website-development.html
+RewriteRule ^work$ work.html
+RewriteRule ^([a-zA-Z0-9-/+][~`\%;a\%a-zA-Z']+)$ page.html?p=oops [NC,L]
