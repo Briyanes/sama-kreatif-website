@@ -5,7 +5,7 @@
 .floating-wa {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    left: 30px;
     z-index: 9999;
     background: #25D366;
     width: 60px;
@@ -34,7 +34,7 @@
 .floating-wa::before {
     content: 'Chat with us!';
     position: absolute;
-    right: 70px;
+    left: 70px;
     background: #25D366;
     color: white;
     padding: 8px 16px;
@@ -49,7 +49,7 @@
 
 .floating-wa:hover::before {
     opacity: 1;
-    right: 80px;
+    left: 80px;
 }
 
 /* Bounce Animation */
@@ -86,7 +86,7 @@
 @media (max-width: 768px) {
     .floating-wa {
         bottom: 20px;
-        right: 20px;
+        left: 20px;
         width: 55px;
         height: 55px;
     }
