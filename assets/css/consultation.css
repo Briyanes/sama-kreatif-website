@@ -2,24 +2,9 @@
    CONSULTATION PAGE STYLES
    ========================================== */
 
-/* Header - White Background for Consultation Page */
-body .nav-header.header-layout1 {
-    background: #ffffff !important;
-    position: relative !important;
-}
-
-/* Ensure menu is visible on white background */
-body .nav-header.header-layout1 .main-menu ul li a {
-    color: #0A0C00;
-}
-
-body .nav-header.header-layout1 .header-logo img {
-    filter: none;
-}
-
 /* Hero Section - White Background */
 .consultation-hero {
-    padding: 120px 0 80px;
+    padding: 80px 0 60px;
     position: relative;
     background: #ffffff !important;
 }
@@ -39,7 +24,7 @@ body .nav-header.header-layout1 .header-logo img {
 
 /* Form Area - Black Background */
 .consultation-form-area {
-    padding: 80px 0 100px;
+    padding: 60px 0 80px;
     background: #0A0C00;
 }
 
@@ -69,22 +54,23 @@ body .nav-header.header-layout1 .header-logo img {
 .consultation-form .form-group label[for="name"]::after,
 .consultation-form .form-group label[for="phone"]::after,
 .consultation-form .form-group label[for="serviceSelect"]::after {
-    content: ' *';
+    content: '*';
     color: #E3FF04;
+    margin-left: 4px;
 }
 
-/* Form Controls - High Contrast for Black Background */
+/* Form Controls - White Background with Black Text */
 .consultation-form .form-control {
     width: 100%;
     height: 55px;
     padding: 0 30px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #E3E3E3;
     border-radius: 5px;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     font-family: 'Poppins', sans-serif;
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.05);
+    color: #0A0C00;
+    background: #ffffff;
     transition: 0.4s ease-in-out;
     overflow: visible;
     text-overflow: clip;
@@ -93,13 +79,13 @@ body .nav-header.header-layout1 .header-logo img {
 
 .consultation-form .form-control:focus {
     border-color: #E3FF04;
-    background: rgba(255, 255, 255, 0.1);
+    background: #ffffff;
     outline: 0;
-    box-shadow: none;
+    box-shadow: 0 0 0 3px rgba(227, 255, 4, 0.1);
 }
 
 .consultation-form .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(10, 12, 0, 0.5);
 }
 
 .consultation-form select.form-control {
@@ -108,7 +94,7 @@ body .nav-header.header-layout1 .header-logo img {
     -webkit-appearance: none;
     -moz-appearance: none;
     padding-right: 45px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%230A0C00' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 20px center;
 }
@@ -124,7 +110,25 @@ body .nav-header.header-layout1 .header-logo img {
 /* Submit Button - Remove custom width, let global style handle */
 .consultation-form .btn.style1 {
     /* Using global button style */
+    background: #E3FF04 !important;
+    color: #0A0C00 !important;
 }
+
+.consultation-form .btn.style1:hover {
+    background: #c9e003 !important;
+    color: #0A0C00 !important;
+}
+
+.consultation-form .btn.style1:focus {
+    background: #c9e003 !important;
+    color: #0A0C00 !important;
+    box-shadow: none;
+}
+
+.consultation-form .btn.style1 .effect-1 {
+    color: #0A0C00 !important;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 991px) {
@@ -143,7 +147,7 @@ body .nav-header.header-layout1 .header-logo img {
 
 @media (max-width: 767px) {
     .consultation-hero {
-        padding: 80px 0 40px;
+        padding: 40px 0;
     }
 
     .consultation-hero .text-title {
@@ -155,7 +159,7 @@ body .nav-header.header-layout1 .header-logo img {
     }
 
     .consultation-form-area {
-        padding: 50px 0 80px;
+        padding: 50px 10px 80px;
     }
 
     .consultation-form .form-control {

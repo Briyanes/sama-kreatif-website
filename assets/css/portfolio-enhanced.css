@@ -41,7 +41,7 @@
 /* Case Study Badge */
 .case-study-badge {
     display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #0A0C00;
     color: #fff;
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
@@ -70,7 +70,7 @@
 .stat-number {
     font-size: 2rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #0A0C00;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

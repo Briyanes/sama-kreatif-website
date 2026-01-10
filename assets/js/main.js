@@ -15,6 +15,8 @@
     =============================================*/
     function preloader() {
         $('.preloader').delay(0).fadeOut();
+        // Add loaded class to body to show floating button
+        $('body').addClass('loaded');
     };
 
 

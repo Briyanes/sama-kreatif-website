@@ -2,6 +2,7 @@
    WHATSAPP FLOATING BUTTON
    ========================================== */
 
+/* Hide initially, show after preloader finishes */
 .floating-wa {
     position: fixed;
     bottom: 30px;
@@ -18,6 +19,17 @@
     cursor: pointer;
     transition: all 0.3s ease;
     animation: wa-bounce 2s infinite;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.5);
+}
+
+/* Show after page loaded */
+body.loaded .floating-wa {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
 }
 
 .floating-wa:hover {
@@ -26,9 +38,12 @@
 }
 
 .floating-wa img {
-    width: 35px;
-    height: 35px;
+    width: 32px !important;
+    height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
     filter: brightness(0) invert(1);
+    display: block;
 }
 
 .floating-wa::before {
@@ -92,8 +107,10 @@
     }
 
     .floating-wa img {
-        width: 30px;
-        height: 30px;
+        width: 28px !important;
+        height: 28px !important;
+        max-width: 28px !important;
+        max-height: 28px !important;
     }
 
     .floating-wa::before {

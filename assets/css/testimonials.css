@@ -32,7 +32,7 @@
 
 .section-subtitle {
     display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #0A0C00;
     color: #fff;
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
@@ -73,7 +73,7 @@
     font-size: 8rem;
     line-height: 1;
     font-family: Georgia, serif;
-    color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #0A0C00;
     opacity: 0.1;
 }
 
@@ -101,7 +101,7 @@
     height: 70px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #667eea;
+    border: 3px solid #E3FF04;
     box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
 }
 
@@ -124,7 +124,7 @@
 
 .author-company {
     font-size: 0.875rem;
-    color: #667eea;
+    color: #E3FF04;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -177,7 +177,7 @@
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #0A0C00;
     border: none;
     border-radius: 50%;
     color: #fff;
@@ -220,7 +220,7 @@
 
 .testimonial-dots .dot.active,
 .testimonial-dots .dot:hover {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #0A0C00;
     transform: scale(1.2);
 }
 
