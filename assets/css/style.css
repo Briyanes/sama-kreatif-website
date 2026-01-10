@@ -6143,36 +6143,86 @@ ul.wp-block-latest-posts li:last-child {
 }
 /* Small devices */
 @media (max-width: 767px) {
+  .hero-wrapper.hero-2 {
+    position: relative !important;
+    min-height: 400px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  }
+
+  .hero-2 .hero-2-thumb {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    z-index: 1 !important;
+    display: block !important;
+    top: auto !important;
+    right: auto !important;
+  }
+
+  .hero-2 .hero-2-thumb img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 400px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .hero-style2 {
+    position: relative !important;
+    z-index: 2 !important;
+    padding: 40px 0 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    margin-top: -50px !important;
+    border-radius: 20px 20px 0 0 !important;
+  }
+
   .hero-style2 .hero-title {
     font-size: 50px;
   }
-  .hero-2 .hero-2-thumb {
-    height: 580px;
-    width: 320px;
-  }
-  .hero-2 .hero-2-thumb img {
-    height: 580px;
-  }
+
   .hero-style2 .hero-contact-wrap {
     max-width: 246px;
   }
 }
 /* Extra small devices */
 @media (max-width: 575px) {
+  .hero-wrapper.hero-2 {
+    position: relative !important;
+    min-height: 300px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  }
+
   .hero-2 .hero-2-thumb {
-    height: auto;
-    width: 100%;
-    position: inherit;
+    height: auto !important;
+    width: 100% !important;
+    position: relative !important;
+    z-index: 1 !important;
+    display: block !important;
+    top: auto !important;
+    right: auto !important;
   }
+
   .hero-2 .hero-2-thumb img {
-    height: auto;
+    height: auto !important;
+    width: 100% !important;
+    max-height: 300px !important;
+    object-fit: cover !important;
+    display: block !important;
   }
+
+  .hero-style2 {
+    position: relative !important;
+    z-index: 2 !important;
+    padding: 30px 0 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    margin-top: -50px !important;
+    border-radius: 20px 20px 0 0 !important;
+  }
+
   .hero-style2 .hero-title {
     font-size: 40px;
   }
-  .hero-style2 {
-    padding: 80px 0 72px;
-  }
+
   .hero-style2 .btn {
     margin-bottom: 33px;
   }
