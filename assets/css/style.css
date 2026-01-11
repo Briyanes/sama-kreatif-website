@@ -6062,10 +6062,13 @@ ul.wp-block-latest-posts li:last-child {
   top: 0;
   z-index: -1;
   height: 744px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 .hero-2 .hero-2-thumb img {
   height: 744px;
   object-fit: cover;
+  width: 100%;
+  display: block;
 }
 
 .hero-style2 {
@@ -6306,10 +6309,15 @@ ul.wp-block-latest-posts li:last-child {
   top: 210px;
   bottom: 0px;
   z-index: 1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  overflow: hidden;
 }
 .hero-4 .hero-4-thumb img {
   height: 100%;
   object-fit: cover;
+  width: 100%;
+  display: block;
 }
 
 .hero-style4 {
@@ -6538,6 +6546,14 @@ ul.wp-block-latest-posts li:last-child {
 }
 .hero-7 .hero-7-thumb {
   margin-bottom: -100px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.hero-7 .hero-7-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .hero-style7 {
