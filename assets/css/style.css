@@ -3466,12 +3466,10 @@ a.text-theme:hover,
 @keyframes img-anim-right {
   0% {
     transform: translateX(5%);
-    clip-path: inset(0 0 0 100%);
     opacity: 0;
   }
   100% {
     transform: translateX(0);
-    clip-path: inset(0 0 0 0);
     opacity: 1;
   }
 }
@@ -3483,12 +3481,10 @@ a.text-theme:hover,
 @keyframes img-anim-left {
   0% {
     transform: translateX(-5%);
-    clip-path: inset(0 100% 0 0);
     opacity: 0;
   }
   100% {
     transform: translateX(0);
-    clip-path: inset(0 0 0 0);
     opacity: 1;
   }
 }
@@ -3500,12 +3496,10 @@ a.text-theme:hover,
 @keyframes img-anim-top {
   0% {
     transform: translateY(-5%);
-    clip-path: inset(0 0 100% 0);
     opacity: 0;
   }
   100% {
     transform: translateY(0);
-    clip-path: inset(0 0 0 0);
     opacity: 1;
   }
 }
