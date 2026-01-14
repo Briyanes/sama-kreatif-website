@@ -113,29 +113,39 @@
 
     function initMetaPixel() {
         try {
-            // Load Meta Pixel hanya jika Pixel ID valid (bukan placeholder)
-            if (ANALYTICS_CONFIG.META_PIXEL_ID &&
-                ANALYTICS_CONFIG.META_PIXEL_ID !== 'XXXXXXXXXXXXXXXX') {
-
-                (function(f,b,e,v,n,t,s)
-                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                n.queue=[];t=b.createElement(e);t.async=!0;
-                t.src=v;s=b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t,s)}(window, document,'script',
-                'https://connect.facebook.net/en_US/fbevents.js');
-
-                fbq('init', ANALYTICS_CONFIG.META_PIXEL_ID);
-                fbq('track', 'PageView');
-
-                if (ANALYTICS_CONFIG.DEBUG_MODE) {
-                    console.log('✅ Meta Pixel initialized: ' + ANALYTICS_CONFIG.META_PIXEL_ID);
-                }
-            } else {
+            // Skip jika Meta Pixel ID adalah placeholder
+            if (!ANALYTICS_CONFIG.META_PIXEL_ID ||
+                ANALYTICS_CONFIG.META_PIXEL_ID === 'XXXXXXXXXXXXXXXX') {
                 if (ANALYTICS_CONFIG.DEBUG_MODE) {
                     console.warn('⚠️  Meta Pixel ID belum diset. Edit analytics.js dan masukkan Pixel ID Anda.');
                 }
+                return;
+            }
+
+            // Load Meta Pixel
+            (function(f,b,e,v,n,t,s) {
+                if(f.fbq) return;
+                n = f.fbq = function() {
+                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+                };
+                if(!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s);
+            })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+            // Initialize Meta Pixel
+            fbq('init', ANALYTICS_CONFIG.META_PIXEL_ID);
+            fbq('track', 'PageView');
+
+            if (ANALYTICS_CONFIG.DEBUG_MODE) {
+                console.log('✅ Meta Pixel initialized: ' + ANALYTICS_CONFIG.META_PIXEL_ID);
             }
         } catch (error) {
             console.error('❌ Error initializing Meta Pixel:', error);
