@@ -3503,6 +3503,80 @@ a.text-theme:hover,
     opacity: 1;
   }
 }
+
+/* CSS Animations for Text (iPhone 11 Compatible) *************************/
+.css-anim-right {
+  animation: css-slide-in-right 1s ease-out forwards;
+  opacity: 0;
+}
+
+.css-anim-left {
+  animation: css-slide-in-left 1s ease-out forwards;
+  opacity: 0;
+}
+
+.css-anim-top {
+  animation: css-slide-in-top 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes css-slide-in-right {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes css-slide-in-left {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes css-slide-in-top {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Stagger animations for multiple elements */
+.hero-style2 .hero-subtile {
+  animation-delay: 0.2s;
+}
+
+.hero-style2 .hero-text {
+  animation-delay: 0.4s;
+}
+
+.hero-style2 .btn {
+  animation-delay: 0.6s;
+}
+
+.hero-style4 .hero-subtile {
+  animation-delay: 0.2s;
+}
+
+.hero-style4 .hero-text {
+  animation-delay: 0.4s;
+}
+
+.hero-style4 .btn {
+  animation-delay: 0.6s;
+}
 /*=================================
     04. Template Style
 ==================================*/
@@ -6066,6 +6140,7 @@ ul.wp-block-latest-posts li:last-child {
 
 .hero-style2 {
   padding: 208px 0 72px;
+  position: relative;
 }
 .hero-style2 .hero-title {
   font-size: 100px;
