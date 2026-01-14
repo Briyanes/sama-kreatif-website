@@ -181,13 +181,39 @@
                 });
             }
 
-            // Track ke Meta Pixel
+            // Track ke Meta Pixel - Contact event
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'Contact');
             }
+
+            if (ANALYTICS_CONFIG.DEBUG_MODE) {
+                console.log('📱 WhatsApp Click tracked:', phoneNumber);
+            }
         },
 
-        // Track form submissions
+        // Track form views (AddToCart event)
+        formView: function(formName, contentName) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'view_item', {
+                    item_name: contentName,
+                    form_name: formName
+                });
+            }
+
+            // Track ke Meta Pixel - AddToCart for form view
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'AddToCart', {
+                    content_name: contentName,
+                    content_category: 'Form'
+                });
+            }
+
+            if (ANALYTICS_CONFIG.DEBUG_MODE) {
+                console.log('👁️ Form View tracked:', formName, contentName);
+            }
+        },
+
+        // Track form submissions (InitiateCheckout event)
         formSubmit: function(formName, formId) {
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'generate_lead', {
@@ -196,9 +222,38 @@
                 });
             }
 
-            // Track ke Meta Pixel
+            // Track ke Meta Pixel - InitiateCheckout
             if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead');
+                fbq('track', 'InitiateCheckout', {
+                    content_name: formName,
+                    content_category: 'Form Submission'
+                });
+            }
+
+            if (ANALYTICS_CONFIG.DEBUG_MODE) {
+                console.log('✅ Form Submit tracked:', formName, formId);
+            }
+        },
+
+        // Track content views on inner pages
+        contentView: function(contentName, contentType) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'view_item', {
+                    item_name: contentName,
+                    item_category: contentType
+                });
+            }
+
+            // Track ke Meta Pixel - ViewContent
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'ViewContent', {
+                    content_name: contentName,
+                    content_type: contentType
+                });
+            }
+
+            if (ANALYTICS_CONFIG.DEBUG_MODE) {
+                console.log('👁️ Content View tracked:', contentName, contentType);
             }
         },
 
@@ -235,7 +290,7 @@
         console.log('📊 GA4 ID:', ANALYTICS_CONFIG.GA4_MEASUREMENT_ID);
         console.log('🏷️  GTM ID:', ANALYTICS_CONFIG.GTM_CONTAINER_ID);
         console.log('📱 Meta Pixel ID:', ANALYTICS_CONFIG.META_PIXEL_ID);
-        console.log('💡 Custom Tracking Available: TrackEvent.pageView(), TrackEvent.ctaClick(), TrackEvent.whatsappClick()');
+        console.log('💡 Custom Tracking Available: TrackEvent.pageView(), TrackEvent.ctaClick(), TrackEvent.whatsappClick(), TrackEvent.formView(), TrackEvent.formSubmit(), TrackEvent.contentView()');
     }
 
 })();
