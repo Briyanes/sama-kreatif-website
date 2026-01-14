@@ -6066,6 +6066,8 @@ ul.wp-block-latest-posts li:last-child {
 
 .hero-style2 {
   padding: 208px 0 72px;
+  position: relative;
+  z-index: 2;
 }
 .hero-style2 .hero-title {
   font-size: 100px;
@@ -6313,6 +6315,8 @@ ul.wp-block-latest-posts li:last-child {
 .hero-style4 {
   padding-top: 210px;
   padding-bottom: 80px;
+  position: relative;
+  z-index: 2;
 }
 .hero-style4 .hero-title {
   font-size: 100px;
