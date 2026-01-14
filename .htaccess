@@ -88,41 +88,41 @@ RewriteRule ^work$ work.html [L]
 # 301 REDIRECTS - Missing Template Files
 # ============================================
 
-# Redirect homepage variants to index.html
-RedirectMatch 301 ^/home-2\.html$ /index.html
-RedirectMatch 301 ^/home-3\.html$ /index.html
-RedirectMatch 301 ^/home-4\.html$ /index.html
-RedirectMatch 301 ^/home-5\.html$ /index.html
-RedirectMatch 301 ^/home-6\.html$ /index.html
-RedirectMatch 301 ^/home-7\.html$ /index.html
-RedirectMatch 301 ^/home-8\.html$ /index.html
+# Redirect homepage variants to index
+RedirectMatch 301 ^/home-2\.html$ /index
+RedirectMatch 301 ^/home-3\.html$ /index
+RedirectMatch 301 ^/home-4\.html$ /index
+RedirectMatch 301 ^/home-5\.html$ /index
+RedirectMatch 301 ^/home-6\.html$ /index
+RedirectMatch 301 ^/home-7\.html$ /index
+RedirectMatch 301 ^/home-8\.html$ /index
 
-# Redirect service overview to index.html
-RedirectMatch 301 ^/service\.html$ /index.html#OurServices
+# Redirect service overview to index
+RedirectMatch 301 ^/service\.html$ /index#OurServices
 
-# Redirect service variants to index.html
-RedirectMatch 301 ^/service-2\.html$ /index.html#OurServices
-RedirectMatch 301 ^/service-3\.html$ /index.html#OurServices
+# Redirect service variants to index
+RedirectMatch 301 ^/service-2\.html$ /index#OurServices
+RedirectMatch 301 ^/service-3\.html$ /index#OurServices
 
-# Redirect service-details to index.html
-RedirectMatch 301 ^/service-details\.html$ /index.html
+# Redirect service-details to index
+RedirectMatch 301 ^/service-details\.html$ /index
 
-# Redirect project overview to work.html
-RedirectMatch 301 ^/project\.html$ /work.html
+# Redirect project overview to work
+RedirectMatch 301 ^/project\.html$ /work
 
-# Redirect project variants to work.html
-RedirectMatch 301 ^/project-2\.html$ /work.html
-RedirectMatch 301 ^/project-3\.html$ /work.html
-RedirectMatch 301 ^/project-4\.html$ /work.html
-RedirectMatch 301 ^/project-5\.html$ /work.html
-RedirectMatch 301 ^/project-6\.html$ /work.html
+# Redirect project variants to work
+RedirectMatch 301 ^/project-2\.html$ /work
+RedirectMatch 301 ^/project-3\.html$ /work
+RedirectMatch 301 ^/project-4\.html$ /work
+RedirectMatch 301 ^/project-5\.html$ /work
+RedirectMatch 301 ^/project-6\.html$ /work
 
-# Redirect team-details to team.html
-RedirectMatch 301 ^/team-details\.html$ /team.html
+# Redirect team-details to team
+RedirectMatch 301 ^/team-details\.html$ /team
 
 # Redirect old form links to consultation page
-RedirectMatch 301 ^/partnership-with-us/?$ /konsultasi.html
-RedirectMatch 301 ^/form\.samakreatif\.com(.*)$ /konsultasi.html$1
+RedirectMatch 301 ^/partnership-with-us/?$ /konsultasi
+RedirectMatch 301 ^/form\.samakreatif\.com(.*)$ /konsultasi$1
 
 # Fallback for undefined pages
 RewriteRule ^([a-zA-Z0-9-/+][~`\%;a\%a-zA-Z']+)$ page.html?p=oops [NC,L]
